@@ -396,23 +396,37 @@ line-height: 1.8;
 font-size: 16px;
 }
 </style>
-<p>{js, echo=FALSE} // Progressive reveal JavaScript - DO NOT REMOVE OR
-EDIT (function() { document.querySelectorAll(‘h2’).forEach(function(el)
-{ el.style.opacity = ‘0’; el.style.transform = ‘translateY(20px)’;
-el.style.transition = ‘opacity 0.6s ease, transform 0.6s ease’; });</p>
-<p>document.querySelectorAll(‘h2 ~ p, h2 ~ img, h2 ~ ul, h2 ~
-ol’).forEach(function(el) { el.style.opacity = ‘0’; el.style.transform =
-‘translateY(20px)’; el.style.transition = ‘opacity 0.6s ease, transform
-0.6s ease’; });</p>
-<p>window.addEventListener(‘scroll’, function() {
-document.querySelectorAll(‘h2’).forEach(function(el) { var rect =
-el.getBoundingClientRect(); if (rect.top &lt; window.innerHeight * 0.85)
-{ el.style.opacity = ‘1’; el.style.transform = ‘translateY(0)’; } });
-}); })(); ``` ##The Data Behind My Walks Every day, I step outside and
-walk. Sometimes it’s a quick 10-minute stroll between classes. Other
-times, it’s a full hour wandering with friends. For this project, I
-logged 40 walks over several weeks, recording the duration of each walk,
-who accompanied me, and my pace. The goal was to uncover patterns in my
+<script>
+// Progressive reveal JavaScript - DO NOT REMOVE OR EDIT
+(function() {
+  document.querySelectorAll('h2').forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  });
+  
+  document.querySelectorAll('h2 ~ p, h2 ~ img, h2 ~ ul, h2 ~ ol').forEach(function(el) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  });
+  
+  window.addEventListener('scroll', function() {
+    document.querySelectorAll('h2').forEach(function(el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight * 0.85) {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }
+    });
+  });
+})();
+</script>
+<p>##The Data Behind My Walks Every day, I step outside and walk.
+Sometimes it’s a quick 10-minute stroll between classes. Other times,
+it’s a full hour wandering with friends. For this project, I logged 40
+walks over several weeks, recording the duration of each walk, who
+accompanied me, and my pace. The goal was to uncover patterns in my
 walking behaviour that I might not have noticed otherwise.</p>
 <p>The data was collected using a Google Form that I completed
 immediately after each walk. This real-time logging ensured accuracy.
